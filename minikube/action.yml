@@ -1,0 +1,20 @@
+name: 'minikube-setup-action'
+description: 'Installs minikube in your Github Actions workflow.'
+branding:
+  icon: 'download-cloud'
+  color: 'blue'
+inputs:
+  minikube-version:
+    description: 'Minikube version to install'
+    required: false
+    default: '1.4.0'
+  k8s-version:
+    description: 'Kubernetes version to install'
+    required: false
+    default: '1.14.6'
+outputs:
+  launcher:
+    description: 'Command to execute to launch minikube'
+runs:
+  using: 'node12'
+  main: 'src/index.js'

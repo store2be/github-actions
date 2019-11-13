@@ -1,5 +1,6 @@
 # store2be Github Actions
 
+- [Minikube](minikube)
 - [Prettier](prettier)
 - [Rubocop](rubocop)
 
