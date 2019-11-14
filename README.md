@@ -4,6 +4,8 @@
 - [Prettier](prettier)
 - [Rubocop](rubocop)
 
+[A lot of actions can be found here](https://github.com/sdras/awesome-actions).
+
 ## Updating versions
 
 When you change a version of a library in an action, please make sure to create a new tag for it. In order to check the naming, you can find the current tags [here](https://github.com/store2be/github-actions/releases).
