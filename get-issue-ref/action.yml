@@ -1,0 +1,23 @@
+name: 'get-issue-ref-action'
+description: 'This action is for getting the ref of an issue comment on a pull request.'
+branding:
+  icon: 'download-cloud'
+  color: 'blue'
+inputs:
+  github_token:
+    description: 'The token to interact with the Github API.'
+    required: true
+  event_name:
+    description: 'The Github Actions event name.'
+    required: true
+  event:
+    description: 'The Github Actions event.'
+    required: true
+outputs:
+  ref:
+    description: 'The Git ref that should be used in the checkout action.'
+  sha:
+    description: 'The Git SHA that should be used in the checkout action.'
+runs:
+  using: 'node12'
+  main: 'src/index.js'
