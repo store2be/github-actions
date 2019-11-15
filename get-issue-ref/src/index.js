@@ -5,7 +5,7 @@ async function run() {
   try {
     const eventName = core.getInput('event_name')
     const event = JSON.parse(core.getInput('event'))
-    const githubToken = core.getInput('githubToken')
+    const githubToken = core.getInput('github_token')
 
     const octokit = new github.GitHub(githubToken)
 
