@@ -13,6 +13,9 @@ inputs:
   event:
     description: 'The Github Actions event.'
     required: true
+  check_name:
+    description: 'The name of the check that will be created.'
+    required: true
 outputs:
   ref:
     description: 'The Git ref that should be used in the checkout action.'

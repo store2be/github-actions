@@ -3,6 +3,7 @@ const github = require('@actions/github')
 
 async function run() {
   try {
+    const checkName = core.getInput('check_name')
     const eventName = core.getInput('event_name')
     const event = JSON.parse(core.getInput('event'))
     const githubToken = core.getInput('github_token')
@@ -23,9 +24,18 @@ async function run() {
     })
 
     const ref = pullRequest.head.ref
-    const sha = pullRequest.head.sha
+    const head_sha = pullRequest.head.sha
+    octokit.checks.create({
+      name: checkName,
+      owner,
+      repo,
+      head_sha,
+    })
+
+    console.log(`New check created for ${owner}/${repo}@${head_sha}`)
+
     core.setOutput('ref', ref)
-    core.setOutput('sha', sha)
+    core.setOutput('sha', head_sha)
   } catch (error) {
     core.setFailed(error.message)
   }
