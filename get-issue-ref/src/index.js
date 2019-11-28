@@ -25,14 +25,17 @@ async function run() {
 
     const ref = pullRequest.head.ref
     const head_sha = pullRequest.head.sha
-    octokit.checks.create({
-      name: checkName,
+    octokit.repos.createDispatchEvent({
       owner,
       repo,
-      head_sha,
+      branch: ref,
+      event_type: checkName,
+      client_payload: {
+        ref: ref,
+        head_sha,
+      },
     })
-
-    console.log(`New check created for ${owner}/${repo}@${head_sha}`)
+    console.log(`New repository dispatch created for ${owner}/${repo} with ref ${ref}`)
 
     core.setOutput('ref', ref)
     core.setOutput('sha', head_sha)
