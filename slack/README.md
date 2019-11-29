@@ -10,7 +10,7 @@ From [pullreminders/slack-action](https://github.com/pullreminders/slack-action)
     SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
   uses: store2be/github-actions/slack@master
   with:
-    args: '{"channel":"#test","text":"Hello world"}'
+    args: '{\"channel\":\"#test\",\"text\":\"Hello world\"}'
 ```
 
 ## Check it out locally
