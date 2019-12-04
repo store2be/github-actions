@@ -20,4 +20,5 @@ It's just using curl, so no need to use the Docker image here.
 ```bash
 export SLACK_WEBHOOK_URL="..."
 ./entrypoint.sh '{"channel":"#test","text":"Hello world"}'
+JSON_FILE=example_payload.json ./entrypoint.sh
 ```
