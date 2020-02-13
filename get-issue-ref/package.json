@@ -1,0 +1,24 @@
+{
+  "name": "get-issue-ref-action",
+  "version": "1.0.0",
+  "description": "This action is for getting the ref of an issue comment on a pull request.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/store2be/github-actions.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/store2be/github-actions/issues"
+  },
+  "homepage": "https://github.com/store2be/github-actions#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.0",
+    "@actions/github": "^1.1.0"
+  }
+}
