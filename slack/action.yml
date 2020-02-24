@@ -1,0 +1,5 @@
+name: 'slack'
+description: 'Sends a Slack message.'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
