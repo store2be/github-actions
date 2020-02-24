@@ -1,0 +1,5 @@
+name: 'rubocop'
+description: 'Run Rubocop'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
